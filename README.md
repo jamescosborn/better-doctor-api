@@ -1,8 +1,8 @@
-# Solar
+# Rename
 ##### by Adam Titus
 
 ### Description
-Will calculate your age on other planets and tell you how many years you have left to live on said planets
+
 
 ### Installation Instructions
 * Clone to desktop
@@ -18,7 +18,7 @@ Will calculate your age on other planets and tell you how many years you have le
 * Working browser with internet connection
 
 ### Known Bugs
-* Will not recognize .getTime() as a method currently for some reason
+
 
 ### Contact Me
 You can reach me at adamtitus76@gmail.com or connect with me on [linkedin](www.linkedin.com/in/adam-titus-06740b149).
