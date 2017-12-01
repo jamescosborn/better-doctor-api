@@ -42,6 +42,6 @@ export class MedicalInfo {
 
   }
   constructor(info) {
-    this.summary = info
+    this.summary = info;
   }
 }

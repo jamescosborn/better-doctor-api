@@ -1,6 +1,9 @@
-import { Rename } from "./../js/Rename.js";
+import { MedicalInfo } from "./../js/doctor-lookup.js";
 
-$(document).ready(function(){
-  console.log("Loaded");
-  $("#test").text("Template Working");
+$(document).ready(function() {
+  $('#doctorName').click(function() {
+    let doctorName = $('#doctorName').val();
+    $('#doctorName').val("");
+  
+  });
 });
