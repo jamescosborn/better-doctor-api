@@ -1,17 +1,16 @@
-var apiKeys = require("./../.env");
-const doctorKey = apiKeys.apiKey;
+var apiKey = require("./../.env");
 
 export class MedicalInfo {
 
   static getDoctor(doctorid, callback) {
     $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctorid}&skip=0&limit=10&user_key=${doctorKey}`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctorid}&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
       data: {
         format: "json"
       },
       success: function(response) {
-        callback(response.name)
+        callback(data.practices.name)
       },
       error: function(error) {
         callback(false, error)
@@ -21,7 +20,7 @@ export class MedicalInfo {
 
   static searchSymptom(symptomid, callback) {
     $.ajax({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptomid}&skip=0&limit=10&user_key=${doctorKey}`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptomid}&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
       data: {
         format: "json"
@@ -33,7 +32,7 @@ export class MedicalInfo {
           doctors[summary.doctorid] = new MedicalInfo(summary);
         })
       },
-      
+
       error: function(error) {
         callback(false, error)
       }
