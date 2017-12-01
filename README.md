@@ -32,9 +32,6 @@ _If you find a way to monetize this please contact the author_
 
 ### Specs
 
-##### Description: The user will be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.  
-Input: `sore throat`  
-Output: `Nearby Doctors: Dolph Lundgren, Dr. Doom`  
 
 ##### Description: The user will be able to enter a name to receive a list of doctors in the Portland area that fit the search query.  
 Input: `Ricky Henderson`  
@@ -43,6 +40,10 @@ Output: `Ricky Henderson's info`
 ##### Description: If a query response includes any doctors, the following information will be given about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.  
 Input: `Ricky Henderson`  
 Output: `First name: Ricky, Last name: Henderson, address: 111 Main St., Website: www.rickyhenderson.com, Accepting new patients: No.`  
+
+##### Description: The user will be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.  
+Input: `sore throat`  
+Output: `Nearby Doctors: Dolph Lundgren, Dr. Doom`  
 
 ##### Description: If the query results in an error, an appropriate error message will be displayed.  
 Input: `Search for Ricky Henderson`  
