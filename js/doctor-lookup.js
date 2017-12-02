@@ -3,7 +3,7 @@ var apiKey = require("./../.env");
 export class MedicalInfo {
 
   static getDoctor(doctorid, callback) {
-    $.ajax({
+    $.get({
       url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctorid}&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
       data: {
@@ -19,7 +19,7 @@ export class MedicalInfo {
   }
 
   static searchSymptom(symptomid, callback) {
-    $.ajax({
+    $.get({
       url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptomid}&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
       data: {
