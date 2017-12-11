@@ -32,14 +32,13 @@ _If you find a way to monetize this please contact the author_
 
 ### Specs
 
+##### Description: The user will be able to enter a doctor's name to receiver: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.  
+Input: `Ricky Henderson`  
+Output: `First name: Ricky, Last name: Henderson, address: 111 Main St., Website: www.rickyhenderson.com, Accepting new patients: No.`  
 
 ##### Description: The user will be able to enter a medical issue to get a list of doctors that can treat that issue.  
 Input: `soar throat`  
 Output: `Ricky Henderson, Laura Palmer`  
-
-##### Description: The user will be able to enter a doctor's name to receiver: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.  
-Input: `Ricky Henderson`  
-Output: `First name: Ricky, Last name: Henderson, address: 111 Main St., Website: www.rickyhenderson.com, Accepting new patients: No.`  
 
 ##### Description: The user will be see an error message if there's a problem with their query.  
 Input: `sore throat`  
