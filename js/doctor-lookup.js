@@ -36,10 +36,7 @@ export class MedicalInfo {
       error: function(error) {
         callback(false, error)
       }
-    })
-  }
-
-
+    });
   }
   constructor(info) {
     this.summary = info;

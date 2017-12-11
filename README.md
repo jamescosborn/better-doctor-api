@@ -33,21 +33,17 @@ _If you find a way to monetize this please contact the author_
 ### Specs
 
 
-##### Description: The user will be able to enter a name to receive a list of doctors in the Portland area that fit the search query.  
-Input: `Ricky Henderson`  
-Output: `Ricky Henderson's info`  
+##### Description: The user will be able to enter a medical issue to get a list of doctors that can treat that issue.  
+Input: `soar throat`  
+Output: `Ricky Henderson, Laura Palmer`  
 
-##### Description: If a query response includes any doctors, the following information will be given about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.  
+##### Description: The user will be able to enter a doctor's name to receiver: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients.  
 Input: `Ricky Henderson`  
 Output: `First name: Ricky, Last name: Henderson, address: 111 Main St., Website: www.rickyhenderson.com, Accepting new patients: No.`  
 
-##### Description: The user will be able to enter a medical issue to receive a list of doctors in the Portland area that fit the search query.  
+##### Description: The user will be see an error message if there's a problem with their query.  
 Input: `sore throat`  
-Output: `Nearby Doctors: Dolph Lundgren, Dr. Doom`  
-
-##### Description: If the query results in an error, an appropriate error message will be displayed.  
-Input: `Search for Ricky Henderson`  
-Output: `Error: Something went horribly wrong`  
+Output: `Error Message: Something went horribly wrong`  
 
 ##### Description: If the query doesn't include any doctors, the application returns a notification that states that no doctors meet the criteria.  
 Input: `Search for Bobby Henderson`  
