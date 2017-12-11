@@ -4,7 +4,7 @@ export class MedicalInfo {
 
   static getDoctor(doctorid, callback) {
     $.get({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctorid}&skip=0&limit=10&user_key=${apiKey}`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctorName}&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
       data: {
         format: "json"
@@ -20,7 +20,7 @@ export class MedicalInfo {
 
   static searchSymptom(symptomid, callback) {
     $.get({
-      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptomid}&skip=0&limit=10&user_key=${apiKey}`,
+      url: `https://api.betterdoctor.com/2016-03-01/doctors?query=${symptomName}&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
       data: {
         format: "json"
