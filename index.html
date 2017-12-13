@@ -11,35 +11,20 @@
     <h1>Better Doctor API search</h1>
     <h4>For the Portland Metro area</h4>
     <img src="img/dr-doom.jpg">
-    <br>
-    <br>
-
-    <form>
+    <br><br>
+    <form id="nameSearch">
       <label for="nameSearch">Enter a doctor's name:</label>
-      <input type="text">
+      <input type="text" id="doctorName">
       <button class="btn-success" id="nameSearch">Get Doctor Information!</button>
     </form>
-
-    <br>
-    <br>
-
+    <br><br>
     <form>
       <label for="symptomSearch">Enter a symptom:</label>
       <input type="text">
       <button class="btn-success" id="symptomSearch">Find Doctors who can treat this!</button>
     </form>
-
-    <div class="well results">
-      <div id="showName"></div>
-      <div id="showAddress"></div>
-      <div id="showPhoneNumber"></div>
-      <!-- <div id="showWebsite"></div> Where is the website? -->
-      <div id="showAvailability"></div>
-
-      <div id="showSymptomInfo"></div>
-
-      <div id="showErrors"></div>
-    </div>
+    <div class="well" id="output">
+    </div>  
   </div>
 </body>
 </html>

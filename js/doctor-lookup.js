@@ -10,12 +10,12 @@ export class MedicalInfo {
         format: "json"
       },
       success: function(response) {
-        callback(response)
+        callback(response);
       },
       error: function(error) {
-        callback(false, error)
+        callback(false, error);
       }
-    })
+    });
   }
 
   static searchSymptom(symptomid, callback) {
@@ -26,11 +26,11 @@ export class MedicalInfo {
         format: "json"
       },
       success: function(response) {
-        callback(response)
+        callback(response);
       },
 
       error: function(error) {
-        callback(false, error)
+        callback(false, error);
       }
     });
   }
