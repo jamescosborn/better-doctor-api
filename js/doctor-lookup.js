@@ -1,8 +1,8 @@
-var apiKey = require("./../.env");
+var apiKey = require("./../.env").apiKey;
 
 export class MedicalInfo {
 
-  static getDoctor(doctorid, callback) {
+  static getDoctor(doctorName, callback) {
     $.get({
       url: `https://api.betterdoctor.com/2016-03-01/doctors?name=${doctorName}&location=or-portland&skip=0&limit=10&user_key=${apiKey}`,
       type: "GET",
