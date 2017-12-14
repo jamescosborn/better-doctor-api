@@ -1,6 +1,5 @@
 import { MedicalInfo } from "./../js/doctor-lookup.js";
 
-
 let displayName = function(result) {
   if (response.meta.total > 0) {
     for (var i = 0; i < response.meta.total; i++) {
