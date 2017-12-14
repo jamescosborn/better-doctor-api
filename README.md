@@ -1,20 +1,25 @@
-# Doctor Lookup
+# Better Doctor API Search
 ##### by James Osborn
 
 ### Description
-This app will allow a user to find a doctor that provides the services they need. A user will be able to enter a medical issue to receive a list of doctors, enter the name of a doctor to receive a list of doctors matching that name, and see a variety of information about the doctor. Additionally, if their is an error in their search, the application will return a notification of what error that is. If the search doesn't return any doctors, a notification will alert the user than no doctors meet the criteria.
+Did you cut yourself while sheathing your samurai sword and now you're bleeding all over the place? Find a doctor that provides the services you need! With this app, you are be able to:   
+
+*-Enter a name to get a list of doctors matching that name,  
+-Enter a symptom to get a list of doctors that can treat that symptom,  
+-Return an appropriate message if there are no matches for the search results,  
+-Return an appropriate message if there is an error*
 
 ### Installation Instructions
-* Clone to Desktop
-* Open it with a Text Editor
-* Type `npm install` and wait for it to complete
+* git clone to Desktop
+* Open with a Text Editor
+* In the console, type `npm install` and wait for it to complete
 * type `bower install` and wait for it to complete
 * type `gulp serve`
 
 ### Technology Needed
 * Node.js
 * Bower
-* Code Text Editor
+* Text Editor (Atom recommended)
 * Working browser with internet connection
 
 ### Known Bugs

@@ -30,7 +30,7 @@ export class MedicalInfo {
       },
 
       error: function(error) {
-        callback(false, error);
+        $("#output").text(`There was an error. Please try again, or try again later.`);
       }
     });
   }
