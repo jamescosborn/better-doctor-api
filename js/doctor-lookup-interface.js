@@ -1,13 +1,13 @@
 import { MedicalInfo } from "./../js/doctor-lookup.js";
 
-let displayName = function(result) {
+let displayName = function(result, error) {
   if (result.meta.total > 0) {
     console.log(result.meta);
     console.log(result.data);
     $('#output').append(`<h2>Results:</h2>`);
     for (var i = 0; i < result.meta.total; i++) {
       $('#output').append(`<br>
-        <li><img src="img/name.png">  Full name: <strong>${result.data[i].profile.first_name} ${result.data[i].profile.last_name}</strong></li>`);
+        <li><img src="img/name.png">  <strong>Dr. ${result.data[i].profile.first_name} ${result.data[i].profile.last_name}</strong></li>`);
         for (var j = 0; j < result.data[i].practices.length; j++) {
           $('#output').append(`
           <li><img src="img/address.png">  Address: ${result.data[i].practices[j].visit_address.street}</li>
@@ -20,27 +20,25 @@ let displayName = function(result) {
       $('#output').append(`<br><h2>Results:</h2>
         <li>Nothing matched that search. Please try again.</li>
       `);
-  } else if (result.meta.error === true) {
-    $('#output').append(`
-      <li>Error. ${result.meta.message} ${result.meta.error_code}</li>
-    `);
-  }
+    }
 };
+
+ // else if (error.meta.error === true) {
+ //  $('#output').append(`
+ //    <li>Error. ${error.meta.message} ${error.meta.error_code}</li>
+ //    `);
+ //  }
 
 let displaySymptom = function(result) {
   if (result.meta.total > 0) {
     for (var i = 0; i < result.meta.total; i++) {
       $('#output').append(`
-        <li>Full name: ${result.data[i].profile.first_name} ${result.data[i].profile.last_name}</li>
+        <li>Dr. ${result.data[i].profile.first_name} ${result.data[i].profile.last_name}</li>
         `);
     }
   } else if (result.meta.total === 0) {
       $('#output').append(`<br><h2>Results:</h2>
         <li>Nothing matched that search. Please try again.</li>
-      `);
-  } else if (result.meta.error === true) {
-      $('#output').append(`
-        <li>Something went wrong. Error code: ${result.meta.error_code}, ${result.meta.message} Please try again.</li>
       `);
   }
 };
