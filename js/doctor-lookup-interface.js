@@ -22,14 +22,11 @@ let displayName = function(result) {
       `);
   } else if (result.meta.error === true) {
     $('#output').append(`
-      <li>Error code: ${result.meta.error_code}, ${result.meta.message} Please try again.</li>
+      <li>Error. ${result.meta.message} ${result.meta.error_code}</li>
     `);
   }
 };
 
-// <li>Address: ${result.practices.visit_address.street}</li>
-// <li>Phone Number: ${result.practices.phones.number}</li>
-// <li>Accepts New Patients: ${result.practices.accepts_new_patients}</li>
 let displaySymptom = function(result) {
   if (result.meta.total > 0) {
     for (var i = 0; i < result.meta.total; i++) {
@@ -37,6 +34,10 @@ let displaySymptom = function(result) {
         <li>Full name: ${result.data[i].profile.first_name} ${result.data[i].profile.last_name}</li>
         `);
     }
+  } else if (result.meta.total === 0) {
+      $('#output').append(`<br><h2>Results:</h2>
+        <li>Nothing matched that search. Please try again.</li>
+      `);
   } else if (result.meta.error === true) {
       $('#output').append(`
         <li>Something went wrong. Error code: ${result.meta.error_code}, ${result.meta.message} Please try again.</li>
