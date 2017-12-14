@@ -4,7 +4,7 @@ let displayName = function(result) {
   if (result.meta.total > 0) {
     console.log(result.meta);
     console.log(result.data);
-    $('#output').append(`<h2>Results:</h2>`)
+    $('#output').append(`<h2>Results:</h2>`);
     for (var i = 0; i < result.meta.total; i++) {
       $('#output').append(`<br>
         <li><img src="img/name.png">  Full name: <strong>${result.data[i].profile.first_name} ${result.data[i].profile.last_name}</strong></li>`);
@@ -30,16 +30,16 @@ let displayName = function(result) {
 // <li>Address: ${result.practices.visit_address.street}</li>
 // <li>Phone Number: ${result.practices.phones.number}</li>
 // <li>Accepts New Patients: ${result.practices.accepts_new_patients}</li>
-let displaySymptom = function(response) {
-  if (response.meta.total > 0) {
-    for (var i = 0; i < response.meta.total; i++) {
+let displaySymptom = function(result) {
+  if (result.meta.total > 0) {
+    for (var i = 0; i < result.meta.total; i++) {
       $('#output').append(`
-        <li>Full name: ${response.data[i].profile.first_name} ${response.data[i].profile.last_name}</li>
+        <li>Full name: ${result.data[i].profile.first_name} ${result.data[i].profile.last_name}</li>
         `);
     }
-  } else if (response.meta.error === true) {
+  } else if (result.meta.error === true) {
       $('#output').append(`
-        <li>Something went wrong. Error code: ${response.meta.error_code}, ${response.meta.message} Please try again.</li>
+        <li>Something went wrong. Error code: ${result.meta.error_code}, ${result.meta.message} Please try again.</li>
       `);
   }
 };
@@ -57,6 +57,8 @@ $(document).ready(function() {
   $('#symptomSearch').submit(function() {
     $('#output').empty();
     let userInput2 = $('#symptomName').val();
-    MedicalInfo.getSymptom(userInput2, displaySymptom);
+    console.log(userInput2);
+    MedicalInfo.searchSymptom(userInput2, displaySymptom);
+    event.preventDefault();
   });
 });
